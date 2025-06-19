@@ -4,9 +4,7 @@
 
 /* Large tablets and small desktops */
 @media (max-width: 1024px) {
-  .logo-container {
-    width: 50vw;
-  }
+
 
   .navbar-container {
     width: 100%;

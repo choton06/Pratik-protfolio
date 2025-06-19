@@ -1,0 +1,153 @@
+/* --- Your existing CSS above --- */
+
+/* Responsive Media Queries */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .logo-container {
+    width: 50vw;
+  }
+
+  .navbar-container {
+    width: 100%;
+  }
+
+  .navbar-container ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ab-img-box, .about-dse {
+    width: 90vw;
+    margin: 10px 0;
+  }
+
+  .service-box-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20px;
+  }
+
+  #Home {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+/* Tablets and small screens */
+@media (max-width: 768px) {
+
+
+
+  .navbar-container {
+    width: 100%;
+    display: none;
+    animation: fadeIn 0.3s ease forwards;
+  }
+
+  .navbar-container.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+  #Home {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .home-tittle {
+    font-size: 1.8rem;
+  }
+
+  .my-img img {
+    width: 200px;
+  }
+
+  #resume-btn {
+    margin-left: 0;
+    width: 60vw;
+  }
+
+  .about-box {
+    flex-direction: column;
+  }
+
+  .ab-img-box, .about-dse {
+    width: 100%;
+    margin: 0 auto 20px 30px;
+  }
+
+  .service-box-container {
+    grid-template-columns: 1fr;
+    margin: 15px;
+    gap: 15px;
+  }
+
+  .project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .project-box{
+    width: max-content;
+  }
+
+  #skill-container {
+    margin-top: 50px;
+  }
+
+  .skill {
+    width: 90vw;
+    margin: 40px auto;
+  }
+
+  #contact_container {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+
+  #social_contact p {
+    padding: 15px;
+  }
+}
+
+
+
+
+

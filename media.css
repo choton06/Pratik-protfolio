@@ -98,10 +98,6 @@
     flex-direction: column;
   }
 
-  .ab-img-box, .about-dse {
-   
-    margin: 0 auto 20px 30px;
-  }
 
   .service-box-container {
     grid-template-columns: 1fr;
@@ -139,6 +135,25 @@
     padding: 15px;
   }
 }
+
+
+@media (max-width: 575.98px) {
+  /* Mobile styles here */
+  .header{
+    width: 64%;
+  }
+ 
+main{
+  
+  margin-left: 77px;
+}
+
+footer{
+  width: 100%
+}
+
+}
+
 
 
 

@@ -17,7 +17,7 @@ body {
 }
 /* header and nav section css start from here */
 header {
-  width: 100vw;
+  width: 100%;
   background-color: #111;
   color: white;
   position: fixed;
@@ -79,6 +79,7 @@ header {
 
 
 #Home{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -527,7 +528,7 @@ margin: 42px 0px 40px 84px;
 
 
 #copyright_con{
-    width: 100vw;
+    
     height: 59px;
     display: flex;
     background-color: black;

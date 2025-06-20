@@ -17,7 +17,7 @@ body {
 }
 /* header and nav section css start from here */
 header {
-  width: 100%;
+  width: 100vw;
   background-color: #111;
   color: white;
   position: fixed;
@@ -169,7 +169,7 @@ header {
 
 
 .about-dse{
-    width: 50vw;
+   
     font-size: 34px;
     padding: 64px 2px;
     font-family: 'Poppins', sans-serif;
@@ -192,7 +192,7 @@ header {
 /* Services section start from here */
 
 .service-box-container{
-    height: 90%;
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 29px;
@@ -238,7 +238,7 @@ h3 {
 }
 
 .skill {
-    width: 60vw;
+
     margin: 60px auto;
     color: #070707;
     padding: 20px;
@@ -527,7 +527,7 @@ margin: 42px 0px 40px 84px;
 
 
 #copyright_con{
-    width: 100%;
+    width: 100vw;
     height: 59px;
     display: flex;
     background-color: black;

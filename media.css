@@ -6,10 +6,6 @@
 @media (max-width: 1024px) {
 
 
-  .navbar-container {
-    width: 100vw;
-  }
-
   .navbar-container ul {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -46,7 +42,7 @@
 @media (max-width: 768px) {
 
   .navbar-container {
-    width: 100vw;
+    
     display: none;
     animation: fadeIn 0.3s ease forwards;
   }
@@ -103,7 +99,7 @@
   }
 
   .ab-img-box, .about-dse {
-    width: 100vw;
+   
     margin: 0 auto 20px 30px;
   }
 

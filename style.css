@@ -15,6 +15,11 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+h1{
+    display: flex;
+    justify-content: center;
+}
 /* header and nav section css start from here */
 header {
   width: 100%;
@@ -47,6 +52,8 @@ header {
 
 .navbar-container {
   display: flex;
+  gap: 25px;
+  align-items: center;
 }
 
 .nav-links {
@@ -67,10 +74,11 @@ header {
 }
 
 .menu-toggle {
-  display: none;
+   display: none;
   font-size: 1.8rem;
   cursor: pointer;
   color: white;
+  z-index: 1002;
 }
 /* header and nav section css end here */
 
@@ -79,7 +87,7 @@ header {
 
 
 #Home{
-    width: 100%;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -223,132 +231,99 @@ header {
 }
 /* Services section end here */
 /* skill bar section part liner section  start here*/
-#skill-container{
-    margin-top: 110px;
-}
-.linerbar-container{
-    text-transform: uppercase;
+#skill-container {
+  margin-top: 110px;
+  padding: 0 20px;
 }
 
-h1 {
-    text-align: center;
-}
-
-h3 {
-    margin: 5px;
+.linerbar-container {
+  text-transform: uppercase;
+  max-width: 800px;
+  margin: auto;
 }
 
 .skill {
-
-    margin: 60px auto;
-    color: #070707;
-    padding: 20px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.skill li {
-    margin: 20px 0px;
-    list-style: none;
-    padding: 10px;
+.skill-bar {
+  margin-bottom: 25px;
 }
 
-.bar {
-    background: #353648;
-    display: block;
-    height: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
- 
-    transition:  0.3s cubic-bezier (.25, .8, .25, 1);
+.label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
 }
 
-.bar:hover {
-    box-shadow: 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.bar-container {
+  background: #eee;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 25px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.bar span {
-    
-    height: 20px;
-    float: left;
-    background: linear-gradient(135deg, rgb(243 228 237) 0%, rgb(90 189 240) 100%);
-
+.bar-fill {
+  height: 100%;
+  color: #000;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 30px;
+  animation: growBar 2s ease forwards infinite;
+  opacity: 0;
 }
 
-.html {
-    width: 90%;
-    animation: html 3s infinite;
+/* Individual widths */
+.bar-fill.html {
+  width: 90%;
+  animation-delay: 0.2s;
 }
 
-.css {
-    width: 70%;
-    animation: css 3s infinite;
+.bar-fill.css {
+  width: 70%;
+  animation-delay: 0.4s;
 }
 
-.react {
-    width: 65%;
-    animation: react 3s infinite;
+.bar-fill.javascript {
+  width: 60%;
+  animation-delay: 0.6s;
 }
 
-
- .javascript {
-    width: 60%;
-    animation: javascript 3s infinite;
+.bar-fill.react {
+  width: 65%;
+  animation-delay: 0.8s;
 }
 
-.nodeJs{
-    width: 70%;
-    animation: nodeJs 3s infinite;
+.bar-fill.nodejs {
+  width: 70%;
+  animation-delay: 1s;
 }
 
-
-@keyframes html {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-
-        width: 90%;
-    }
+/* Animation */
+@keyframes growBar {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes css {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 70%;
-    }
-}
-@keyframes react {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 65%;
-    }
-}
-@keyframes nodeJs {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 70%;
-    }
-}
-@keyframes javascript {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 60%;
-    }
+/* Responsive */
+@media (max-width: 600px) {
+  .bar-fill {
+    font-size: 0.75rem;
+  }
 }
 
 /* skill bar section part liner section  end here*/
@@ -398,77 +373,77 @@ h3 {
 }
 /* Certificate section end here and project section start from here */
 
-.project-container{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 30px;
-margin: 42px 0px 40px 84px;
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 40px;
+  margin: 42px 0;
 }
+
 .project-box {
   position: relative;
-  width: 300px;
-  height: 200px;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-/* Blur background + scale */
 .project-box img {
   width: 100%;
-  height: 100%;
-  object-fit:contain;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  height: 160px;
+  object-fit: contain;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Colored blur overlay */
-.project-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(192, 238, 243, 0.3); /* pinkish overlay — change to any color */
-  backdrop-filter: blur(4px);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 12px;
+.project-info {
+  padding: 16px;
 }
 
-/* Centered link */
-.project-box a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%) scale(0.8);
-  opacity: 0;
-  padding: 12px 20px;
-  color:black;
-  border-radius: 8px;
+.project-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.project-info p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.project-info a {
+  background: #00ffc8;
+  color: #000;
   text-decoration: none;
-  font-weight: bold;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  pointer-events: none;
-  z-index: 2; /* above the overlay */
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-/* Hover Effects */
-.project-box:hover img {
-  filter: blur(3px) brightness(0.92);
-  transform: scale(1.05);
+.project-info a:hover {
+  background: #fff;
+  color: #00ffc8;
+  box-shadow: 0 0 0 2px #00ffc8 inset;
 }
 
-.project-box:hover::before {
-  opacity: 1;
+.code-link {
+  margin-left: 10px;
+  color: #444;
+  font-size: 0.85rem;
 }
 
-.project-box:hover a {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  pointer-events: auto;
+.code-link i {
+  margin-right: 4px;
 }
+
 
 /* project section end here and contact section start from here */
 

@@ -151,6 +151,29 @@
   }
 }
 
+/* Extra small devices */
+@media (max-width: 480px) {
+  .home-tittle {
+    font-size: 1.4rem;
+  }
+  .about-dse {
+    font-size: 20px;
+    padding: 20px 10px;
+  }
+  #resume-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .project-box img {
+    height: 120px;
+  }
+  .about-box video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
 
 

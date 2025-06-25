@@ -127,10 +127,6 @@
     flex-direction: column;
   }
 
-  .project-box{
-    width: max-content;
-  }
-
   #skill-container {
     margin-top: 50px;
   }
